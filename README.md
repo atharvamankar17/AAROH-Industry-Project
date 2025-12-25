@@ -207,6 +207,7 @@ http://127.0.0.1:8000/docs
 ### GET /api/ai-test
 
 Temporary endpoint to verify Gen-AI output independently.
+
 ---
 
 ### Architecture Overview
