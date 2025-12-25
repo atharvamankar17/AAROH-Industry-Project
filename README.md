@@ -248,6 +248,7 @@ Never commit:
 - .env
 - API keys
 - Cache or build artifacts
+  
 ---
 
 ### Future Enhancements
@@ -256,15 +257,17 @@ Never commit:
 - Playlist generation
 - User authentication (Clerk)
 - Listening history
-
-Personalized analytics
+- Personalized analytics
+  
 ---
 ### Contribution
 
 - Pull requests and issues are welcome.
 - Please keep changes modular and well-documented.
+  
 ---
 ### License
 
 This project is for educational and experimental use only.
+
 ---
