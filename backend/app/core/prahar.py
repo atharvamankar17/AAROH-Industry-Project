@@ -11,12 +11,13 @@ def get_prahar_from_timestamp(timestamp: str) -> str:
     # Parse ISO timestamp
     dt = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
 
-    # Convert to IST
+    # Convert to 
     ist_time = dt.astimezone(IST)
     hour = ist_time.hour
 
     # DEBUG (keep this for now)
     print("IST TIME →", ist_time.strftime("%H:%M"))
+    
 
 
 # Determine fine prahar
