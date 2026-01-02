@@ -173,27 +173,34 @@ const Dashboard = () => {
             </div>
           )}
 
-          {recommendation && (
-            <div className="mb-4 glass p-4 rounded-xl border border-primary/30">
-              <p className="text-sm text-muted-foreground">
-                Recommended for you
-              </p>
-              <p className="text-lg font-semibold text-primary">
-                Raaga {recommendation.raaga}
-              </p>
-            </div>
-          )}
+{recommendation && (
+  <div className="mb-4 p-4 rounded-xl border border-purple-300/50 bg-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+    
+    {/* Left: Raaga Info */}
+    <div className="flex flex-col gap-1 text-center sm:text-left flex-1">
+      <p className="text-xs text-muted-foreground uppercase tracking-wide">
+        Recommended for you
+      </p>
+      <p className="text-lg font-semibold text-purple-500">
+        Raaga {recommendation.raaga}
+      </p>
+      <p className="text-xs text-muted-foreground">
+        Curated for your current mood & time of day
+      </p>
+    </div>
 
-          {isMainDashboard && (
-            <div className="mb-6">
-              <Button
-                className="w-full md:w-auto"
-                onClick={handlePlaySpotify}
-              >
-                ▶ Play personalized playlist on Spotify
-              </Button>
-            </div>
-          )}
+    {/* Right: Spotify Button main dashboard */}
+    {isMainDashboard && (
+      <Button
+        className="mt-3 sm:mt-0 whitespace-nowrap"
+        onClick={handlePlaySpotify}
+      >
+        ▶ Play personalized playlist on Spotify
+      </Button>
+    )}
+
+  </div>
+)}
 
           {isMainDashboard ? (
             <DashboardHome

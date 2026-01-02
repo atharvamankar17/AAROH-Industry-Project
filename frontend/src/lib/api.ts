@@ -37,3 +37,9 @@ export async function fetchRecommendation(
 
   return response.json();
 }
+
+// export async function fetchAnalytics() {
+//   const res = await fetch("http://127.0.0.1:8000/api/analytics");
+//   if (!res.ok) throw new Error("Failed to fetch analytics");
+//   return res.json();
+// }

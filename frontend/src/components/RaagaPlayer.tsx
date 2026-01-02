@@ -191,57 +191,6 @@ const RaagaPlayer = ({ raaga }: Props) => {
           </div>
         </div>
       </div>
-
-      {/* Dropdowns (kept as-is, will remove later) */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div>
-          <label className="text-xs text-muted-foreground mb-2 block">
-            Genre
-          </label>
-          <Select defaultValue="classical">
-            <SelectTrigger className="glass border-border/30 rounded-xl">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="glass-strong border-border/30 rounded-xl">
-              <SelectItem value="classical">Classical</SelectItem>
-              <SelectItem value="bollywood">Bollywood</SelectItem>
-              <SelectItem value="western">Western</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <label className="text-xs text-muted-foreground mb-2 block">
-            Language
-          </label>
-          <Select defaultValue="hindi">
-            <SelectTrigger className="glass border-border/30 rounded-xl">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="glass-strong border-border/30 rounded-xl">
-              <SelectItem value="hindi">Hindi</SelectItem>
-              <SelectItem value="marathi">Marathi</SelectItem>
-              <SelectItem value="english">English</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div>
-          <label className="text-xs text-muted-foreground mb-2 block">
-            Frequency
-          </label>
-          <Select defaultValue="432">
-            <SelectTrigger className="glass border-border/30 rounded-xl">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent className="glass-strong border-border/30 rounded-xl">
-              <SelectItem value="432">432 Hz</SelectItem>
-              <SelectItem value="528">528 Hz</SelectItem>
-              <SelectItem value="639">639 Hz</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
     </div>
   );
 };

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@clerk/nextjs": "^6.36.5",
+    "@radix-ui/react-presence": "^1.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3"
+  }
+}

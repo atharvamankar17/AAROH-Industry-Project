@@ -57,16 +57,12 @@ const MoodBoardPage = () => {
             {recommendedRaagas[selectedMood as keyof typeof recommendedRaagas].map((raaga) => (
               <div
                 key={raaga}
-                className="p-4 rounded-xl bg-muted/30 border border-border/30 hover:border-primary/30 hover:bg-muted/50 transition-all cursor-pointer"
+                className="p-4 rounded-xl bg-muted/30 border border-border/30 "
               >
                 <h4 className="font-medium text-foreground">{raaga}</h4>
-                <p className="text-xs text-muted-foreground mt-1">Tap to play</p>
               </div>
             ))}
           </div>
-          <Button variant="glow" className="mt-6">
-            Play {selectedMood} Playlist
-          </Button>
         </div>
       )}
     </div>

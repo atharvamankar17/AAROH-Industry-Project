@@ -43,12 +43,7 @@ const MoodPopup = ({ open, onClose, onSelect }: MoodPopupProps) => {
   return (
     <Dialog open={open} onOpenChange={(isOpen) => !isOpen && onClose()}>
       <DialogContent className="glass-strong border-border/30 rounded-3xl max-w-lg p-8">
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 rounded-full p-2 hover:bg-muted/50 transition-colors"
-        >
-          <X className="w-4 h-4 text-muted-foreground" />
-        </button>
+
 
         <DialogHeader className="text-center mb-6">
           <DialogTitle className="text-2xl font-playfair text-gradient">

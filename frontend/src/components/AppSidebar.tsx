@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
   { icon: Heart, label: "Mood Board", path: "/dashboard/mood" },
-  { icon: Music, label: "Raaga Player", path: "/dashboard/player" },
+  { icon: Music, label: "Raaga Song Recommendations", path: "/dashboard/player" },
   { icon: Clock, label: "Prahar Timeline", path: "/dashboard/timeline" },
   { icon: BarChart3, label: "Analytics", path: "/dashboard/analytics" },
   { icon: Settings, label: "Settings", path: "/dashboard/settings" },
@@ -42,7 +42,7 @@ const AppSidebar = () => {
           </div>
           {!collapsed && (
             <span className="text-xl font-playfair font-bold text-gradient">
-              Prahar
+              SwarPrahar
             </span>
           )}
         </div>
