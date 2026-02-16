@@ -1,22 +1,32 @@
 from dotenv import load_dotenv
-load_dotenv()  # ✅ LOAD .env BEFORE anything else
-
+import os
+from pathlib import Path
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api.recommend import router as recommend_router
-from app.api.analytics import router as analytics_router
+from app.core.directory import router as music_router
 
-app = FastAPI(title="Prahar Music Zen API")
+load_dotenv()
 
-# ✅ CORS FIX
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8080"],  # frontend
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-app.include_router(recommend_router, prefix="/api")
-app.include_router(analytics_router, prefix="/api")  
+BASE_DIR = Path(__file__).resolve().parent
+MUSIC_FOLDER = BASE_DIR / "songs"
+MUSIC_FOLDER.mkdir(exist_ok=True)
+
+app.mount("/songs", StaticFiles(directory=str(MUSIC_FOLDER)), name="songs")
+
+app.include_router(music_router, prefix="/api")
+
+@app.get("/debug")
+async def debug_routes():
+    return [{"path": route.path} for route in app.routes]
